@@ -1,0 +1,35 @@
+#qna{
+    display: none;
+}
+
+.qBox{
+    background-color: whitesmoke;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 25px;
+}
+
+.answerList{
+    background-color: whitesmoke;
+    border-radius: 20px;
+    display: block;
+    width: 100%;
+    font-size: 20px;
+}
+
+.answerList:hover, .answerList:focus{
+    background-color: gray;
+}
+
+.status{
+    height: 20px;
+    width: 80%;
+    background-color: white;
+    border-radius: 20px; 
+}
+
+.statusBar{
+    height: 100%;
+    background-color: grey;
+    border-radius: 20px; 
+}

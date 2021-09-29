@@ -17,51 +17,51 @@ const qnaList = [
   {
     q: '3. 금요일, 퇴근 후 피곤함을 달래기 위한 방법은?',
     a: [
-      { answer: 'a. 친한 친구들과 치맥!! 캬', type: ['cow', 'rabbit', 'tiger', 'dog', 'monkey'] },
-      { answer: 'b. 바로 집으로 직행해서 샤워 후 눕기!', type: ['sheep', 'chick', 'pig'] },
+      { answer: 'a. 친한 친구들과 치맥!! 캬', type: ['SA', 'DM', 'WD', 'U2D', 'FND'] },
+      { answer: 'b. 바로 집으로 직행해서 샤워 후 눕기!', type: ['BND', 'DA', 'SWT'] },
     ]
   },
   {
     q: '4. "OOO씨!" 대표님이 갑자기 나를 부른다면?',
     a: [
-      { answer: 'a. 무슨 일이지? 생각하며 대표님한테 달려간다. ', type: ['cow', 'tiger', 'dragon' ] },
-      { answer: 'b. 옆 동료에게 "무슨일 있어?.." 하고 물어본다. ', type: ['sheep', 'dog', 'monkey', 'chick', 'pig' ] },
+      { answer: 'a. 무슨 일이지? 생각하며 대표님한테 달려간다. ', type: ['SA', 'BND', 'DA' ] },
+      { answer: 'b. 옆 동료에게 "무슨일 있어?.." 하고 물어본다. ', type: ['DM', 'WD', 'SWT', 'U2D', 'FND' ] },
     ]
   },
   {
     q: '5. "너네 회사 어때?" 하고 친구가 우리 회사에 대해 물어본다면? ',
     a: [
-      { answer: 'a. 사람들 관련해서 이야기 한다.', type: ['cow', 'sheep', 'dog', 'dragon', 'chick' ] },
-      { answer: 'b. 업무 및 운영중인 서비스에 대해 이야기 한다. ', type: ['mouse', 'rabbit', 'horse', 'pig']},
+      { answer: 'a. 사람들 관련해서 이야기 한다.', type: ['DM', 'SA', 'WD', 'U2D', 'FND' ] },
+      { answer: 'b. 업무 및 운영중인 서비스에 대해 이야기 한다. ', type: ['BND', 'DA', 'SWT']},
     ]
   },
 
   {
     q: '6. 신입 사원이 업무에 대해 물어본다면? ',
     a: [
-      { answer: 'a. 상세하게 알려준다. ', type: ['dragon', 'chick', 'pig' ] },
-      { answer: 'b. 가이드에 나와있다고 말하며 스스로 알 수 있도록 도와준다. ', type: ['mouse', 'rabbit', 'horse', 'dog' ] },
+      { answer: 'a. 상세하게 알려준다. ', type: ['DM', 'WD', 'SWT' ] },
+      { answer: 'b. 가이드에 나와있다고 말하며 스스로 알 수 있도록 도와준다. ', type: ['U2D', 'FND', 'SA', 'BND', 'DA' ] },
     ]
   },
   {
     q: '7. 일이 많은데 시간이 부족하다면? ',
     a: [
-      { answer: 'a. 다른 일을 못하더라도 중요한 일부터 처리한다.', type: ['cow', 'sheep', 'pig' ] },
-      { answer: 'b. 모든 업무를 1차 결과물로 빠르게 처리한다. ', type: ['tiger', 'dragon', 'chick' ] },
+      { answer: 'a. 다른 일을 못하더라도 중요한 일부터 처리한다.', type: ['DM', 'SA', 'WD', 'BND' ] },
+      { answer: 'b. 모든 업무를 1차 결과물로 빠르게 처리한다. ', type: ['SWT', 'DA', 'U2D', 'FND' ] },
     ]
   },
   {
     q: '8. 회사에 새로운 프로젝트가 생겼다면? ',
     a: [
-      { answer: 'a. 누가 참여하는지 살펴본다. ', type: ['mouse', 'dragon', 'chick' ] },
-      { answer: 'b. 묻지도 따지지 않고 바로 참가한다고 말한다. ', type: ['rabbit', 'tiger', 'horse', 'snake', 'dog', 'monkey' ] },
+      { answer: 'a. 누가 참여하는지 살펴본다. ', type: ['DA', 'DM', 'SA' ] },
+      { answer: 'b. 묻지도 따지지 않고 바로 참가한다고 말한다. ', type: ['SWT', 'U2D', 'WD', 'FND', 'BND'] },
     ]
   },
   {
     q: '9. 다른 회사에서 스카우트 제안메일이 온다면? ',
     a: [
-      { answer: 'a. 나중에 보려고 메일을 숨김 처리한다. ', type: ['sheep', 'mouse', 'snake', 'chick' ] },
-      { answer: 'b. 회사 이름을 기억한 후 메일을 삭제한다. ', type: ['cow', 'rabbit', 'horse', 'pig' ] },
+      { answer: 'a. 나중에 보려고 메일을 숨김 처리한다. ', type: ['DA', 'DM', 'SA', 'SWT' ] },
+      { answer: 'b. 회사 이름을 기억한 후 메일을 삭제한다. ', type: ['U2D', 'WD', 'FND', 'BND' ] },
     ]
   },
 ]

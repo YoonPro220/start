@@ -2,43 +2,27 @@ const main = document.querySelector("#main");
 const qna = document.querySelector("#qna");
 const result = document.querySelector("#result");
 const endPoint = 9;
-const select = [];
+const select = [0,0,0,0,0,0,0,0];
 
 function calResult(){
-    var pointArray = [
-        //FND,U2D,DA,SWT,DM,WD,SA,BND
-        {name: 'FND', value: 0, key: 0},
-        {name: 'U2D', value: 0, key: 1},
-        {name: 'DA', value: 0, key: 2},
-        {name: 'SWT', value: 0, key: 3},
-        {name: 'DM', value: 0, key: 4},
-        {name: 'WD', value: 0, key: 5},
-        {name: 'SA', value: 0, key: 6},
-        {name: 'BND', value: 0, key: 7},
-    ]
-
-    for(let i = 0; i < endPoint; i++){
-        var target = qnaList[i].a[select[i]];
-        for(let j = 0; j < target.type.length; j++){
-            for(let k = 0; k < pointArray.length; k++){
-                if(target.type[j] == pointArray[k].name){
-                    pointArray.value += 1;
-                }
-            }
-        }
-    }
-
-    var resultArray = pointArray.sort(function (a,b){
-        if(a.value > b.value){
-            return -1;
-        }
-        if(a.value > b.value){
-            return 1;
-        }
-        return 0;
-    })
-    let resultword = resultArray[0].key;
+    var result = select.indexOf(Math.max(...select));
     return resultword;
+}
+
+function setResult(){
+    let point = calResult();
+    const resultName = document.querySelector('.resultname');
+    resultName.innerHTML = infoList[point].name;
+
+    var resultImg = document.createElement('img');
+    const imgDiv = document.querySelector('#resultImg');
+    var imgURL = 'img/image-' + point + '.png';
+    resultImg.scr = imgURL;
+    resultImg.alt = point;
+    imgDiv.appendChild(resultImg);
+
+    const resultDesc = document.querySelector('resultDesc');
+    resultDesc.innerHTML = infoList[point].desc;
 }
 
 function goResult(){
@@ -50,8 +34,9 @@ function goResult(){
         setTimeout(() => {
             qna.style.display = "none";
             result.style.display = "block";
-        },450)
-    }); 
+        },450)})
+        
+        setResult();
 
     //console.log(select);
 }
@@ -76,7 +61,11 @@ function addAnswer(answerText, qIdx, idx){
             children[i].style.aniamation = "fadeOut 1s";
         }
         setTimeout(() => {
-            select[qIdx] = idx;
+            var target = qnaList[qIdx].a[idx].type;
+            for(let i = 0; i < target.length; i++){
+                select[target[i]] += 1;
+            }
+
             for(let i = 0; i < children.length; i++){
                 children[i].style.display = 'none';
             }

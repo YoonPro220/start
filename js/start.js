@@ -6,7 +6,7 @@ const select = [0,0,0,0,0,0,0,0];
 
 function calResult(){
     var result = select.indexOf(Math.max(...select));
-    return resultword;
+    return result;
 }
 
 function setResult(){
@@ -14,14 +14,15 @@ function setResult(){
     const resultName = document.querySelector('.resultname');
     resultName.innerHTML = infoList[point].name;
 
-    var resultImg = document.createElement('img');
-    const imgDiv = document.querySelector('#resultImg');
-    var imgURL = 'img/image-' + point + '.png';
+    var resultImg = document.createElement("img");
+    const imgDiv = document.querySelector("#resultImg");
+    var imgURL = '/img/image-' + point + ".png";
     resultImg.scr = imgURL;
     resultImg.alt = point;
+    resultImg.classList.add('img-fluid');
     imgDiv.appendChild(resultImg);
 
-    const resultDesc = document.querySelector('resultDesc');
+    const resultDesc = document.querySelector(".resultDesc");
     resultDesc.innerHTML = infoList[point].desc;
 }
 
@@ -31,26 +32,29 @@ function goResult(){
     setTimeout(() => {
         result.style.WebkitAnimation = "fadeIn 1s";
         result.style.aniamation = "fadeIn 1s";
+
         setTimeout(() => {
             qna.style.display = "none";
             result.style.display = "block";
-        },450)})
+        },450);
+    },450);
         
-        setResult();
+    calResult();   
+    setResult();
 
     //console.log(select);
 }
 
 function addAnswer(answerText, qIdx, idx){
-    var a = document.querySelector('.answerBox')
-    var answer = document.createElement('button');
+    var a = document.querySelector(".answerBox")
+    var answer = document.createElement("button");
     answer.classList.add('answerList');
     answer.classList.add('my-3');
     answer.classList.add('py-3');
     answer.classList.add('mx-auto');
     answer.classList.add('fadeIn');
 
-    a.appendChild(answer)
+    a.appendChild(answer);
     answer.innerHTML = answerText;
 
     answer.addEventListener("click", function(){
@@ -96,8 +100,8 @@ function begin(){
         setTimeout(() => {
             main.style.display = "none";
             qna.style.display = "block";
-        },450)
-        let qIdx = 0;
+            var qIdx = 0;
         goNext(qIdx);
+        },450)
     },450);
 }

@@ -14,10 +14,10 @@ function setResult(){
     const resultName = document.querySelector('.resultname');
     resultName.innerHTML = infoList[point].name;
 
-    var resultImg = document.createElement("img");
-    const imgDiv = document.querySelector("#resultImg");
-    var imgURL = '/img/image-' + point + ".png";
-    resultImg.scr = imgURL;
+    var resultImg = document.createElement('img');
+    const imgDiv = document.querySelector('#resultImg');
+    var imgURL = './img/image-' + point + '.png';
+    resultImg.src = imgURL;
     resultImg.alt = point;
     resultImg.classList.add('img-fluid');
     imgDiv.appendChild(resultImg);
@@ -39,10 +39,9 @@ function goResult(){
         },450);
     },450);
         
-    calResult();   
+   // calResult();   
     setResult();
 
-    //console.log(select);
 }
 
 function addAnswer(answerText, qIdx, idx){

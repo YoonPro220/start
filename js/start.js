@@ -39,7 +39,6 @@ function goResult(){
         },450);
     },450);
         
-   // calResult();   
     setResult();
 
 }
@@ -76,6 +75,7 @@ function addAnswer(answerText, qIdx, idx){
         },450)
     }, false);
 }
+
 function goNext(qIdx){
     if(qIdx == endPoint){
         goResult()
